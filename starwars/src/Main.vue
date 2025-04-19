@@ -1,7 +1,14 @@
 <template>
   <div>
-    <router-link to="/home" class="btn">Ir para Home</router-link>
-
+    <router-link
+      :to="{
+        path: '/Home',
+        state: { favorites: favorites },
+      }"
+      class="btn"
+    >
+      Ir para Home
+    </router-link>
     <br />
 
     <button @click="fetchData">Buscar Pessoas</button>
